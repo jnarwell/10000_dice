@@ -1,22 +1,8 @@
 console.log('js-function');
-class diceGame{
-    constructor(){
-        this.score = 0;
-        this.roll = [];
-    }
-    roll(){
-        for (let i = 0; i<6;i++){
-            //this.roll.push(Math.random()*(6-1)+1)
-            this.score+=(Math.random()*(6-1)+1);
-        }
-    }
-}
 loadPage();
 
 function loadPage(){
     console.log('loading page...')
-    let game = new diceGame();
-    console.log(game);
 
     const navLinks = document.getElementsByClassName('nav-link');
     for (let link of navLinks){
