@@ -1,4 +1,4 @@
-body{
+#home{
     min-height: 100vh;
 }
 .is-invisible{
@@ -12,4 +12,7 @@ body{
     margin-top: 0px;
     padding-top: 0px;
     padding-left: 100px;
+}
+.dice{
+    width: 50px;
 }

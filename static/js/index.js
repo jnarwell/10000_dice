@@ -14,7 +14,6 @@ function loadPage(){
 
 function reset(){
     totalScore = 0;
-    document.getElementById('dice1').src = 'static/images/dice-1.svg';
     document.getElementById('score').innerHTML = 0;
     document.getElementById('total-score').innerHTML = totalScore;
 
@@ -38,7 +37,7 @@ function getScore(diceRoll){
     let score = 0;
     let counts = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0};
     let straight = 0;
-    shakeDice(diceRoll);
+    shakeDice();
     
     for (let die of diceRoll){
         counts[die]++;
@@ -78,8 +77,7 @@ function getScore(diceRoll){
     //console.log(totalScore);
 
     totalScore+=score;
-    document.getElementById('score').innerHTML = score;
-    document.getElementById('total-score').innerHTML = totalScore;
+    displayDice(diceRoll, score, totalScore);
     if (totalScore >= 10000){
         document.getElementById('roll-btn').innerHTML = 'Reset';
         const rollButton = document.getElementById('roll-btn');
@@ -97,19 +95,20 @@ function resetDice(){
     }
 }
 
-function displayDice(diceRoll){
+function displayDice(diceRoll, score, totalScore){
     const dieSlots = document.getElementsByClassName('dice');
     let i=0;
     setTimeout(function(){
         for (let slot of dieSlots){
-            console.log(diceRoll[i]);
             slot.src=dice[diceRoll[i]-1];
             i++;
         }
-    }, 500*5)
+    }, 500*4)
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('total-score').innerHTML = totalScore;
 }
 
-function shakeDice(diceRoll){
+function shakeDice(){
     const dieSlots = document.getElementsByClassName('dice');
     for(let i=0;i<4;i++){
         setTimeout(function(){
@@ -118,5 +117,4 @@ function shakeDice(diceRoll){
             }
         }, 500*i)
     }
-    displayDice(diceRoll);
 }

@@ -21,14 +21,18 @@
             <div class="row">
                 <h2 class="">Welcome to the Game of 10,000 Dice</h2>
             </div>
-            <div class="row">
-                <div class="col-12"><h4 class="">Roll the dice:</h4></div>
-                <div class="col-1"><button id="roll-btn" class="btn btn-primary m3">roll</button></div>
-                <div class="col-11"><img id="dice1" class="dice"></img><img id="dice2" class="dice"></img><img id="dice3" class="dice"></img><img id="dice4" class="dice"></img><img id="dice5" class="dice"></img><img id="dice6" class="dice"></img></div>
-                <div class="col-2">Roll Score: <img id="score"></img></div>
-                <div class="col-2">Total Score: <span id="total-score"></span></div>
+            <div class="row justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col-2"><h4 class="text-end">Roll the dice:</h4></div>
+                    <div class="col-1"><button id="roll-btn" class="btn btn-primary m3">roll</button></div>
+                </div>
+                <div class="row justify-content-center"><img id="dice1" class="dice"></img><img id="dice2" class="dice"></img><img id="dice3" class="dice"></img><img id="dice4" class="dice"></img><img id="dice5" class="dice"></img><img id="dice6" class="dice"></img></div>
+                <div class="row justify-content-center">
+                    <div class="col-1">Roll Score: <span id="score"></span></div>
+                    <div class="col-1">Total Score: <span id="total-score"></span></div>
+                </div>
             </div>
-            <div class="row">
+            <div class="row fixed-bottom m-5">
                 <h4>Rules:</h4>
                 <p>To play the game please click the "roll" button. The rolls are scored as follows:</p>
                 <ul id="rule-list">
