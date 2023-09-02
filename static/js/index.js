@@ -15,6 +15,7 @@ function loadPage(){
 function reset(){
     totalScore = 0;
     document.getElementById('score').innerHTML = 0;
+    document.getElementById('rollScore').innerHTML = 'Roll score: ';
     document.getElementById('total-score').innerHTML = totalScore;
 
     document.getElementById('roll-btn').innerHTML = 'Roll';
@@ -82,6 +83,8 @@ function getScore(diceRoll){
         document.getElementById('roll-btn').innerHTML = 'Reset';
         const rollButton = document.getElementById('roll-btn');
         rollButton.addEventListener('click', reset)
+        document.getElementById('rollScore').innerHTML = 'You won!';
+        document.getElementById('score').innerHTML = '';
     }
 }
 function getKeyByValue(object, value) {

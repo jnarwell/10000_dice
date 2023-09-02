@@ -14,5 +14,8 @@
     padding-left: 100px;
 }
 .dice{
-    width: 50px;
+    width: 150px;
+}
+.score{
+    font-size: 40px;
 }
